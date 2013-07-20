@@ -5,7 +5,7 @@ app.use(express.logger());
 app.get('/', function(request, response) {
   var fs = require('fs');
   var text = fs.readFileSync(infile);
-  response.send(text);
+  response.send(text.toString());
   //response.send('Hello World 2!');
 });
 
